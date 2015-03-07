@@ -1,17 +1,25 @@
 package CS585ClassProject;
 
 public class SimpleEvenOdd {
-	boolean result;
+	private boolean result;
 	
 	public SimpleEvenOdd() {
-		result = false;
+		setResult(false);
 	}
 	
     public boolean isEvenNumber(int number){
         
         if(number%2 == 0){
-            result = true;
+            setResult(true);
         }
-        return result;
+        return isResult();
     }
+
+	public boolean isResult() {
+		return result;
+	}
+
+	public void setResult(boolean result) {
+		this.result = result;
+	}
 }
